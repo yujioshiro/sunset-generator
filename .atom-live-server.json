@@ -1,0 +1,5 @@
+//Configuring the atom-live-server to open in Google Chrome
+
+{
+  "browser": "google chrome"
+}
