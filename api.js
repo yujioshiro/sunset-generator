@@ -67,4 +67,4 @@ function getStats(position) {
 }
 
 // Get weather
-getLocation()
+getLocation();

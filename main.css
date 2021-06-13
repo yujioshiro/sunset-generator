@@ -33,10 +33,10 @@ body {
 
 @keyframes cloudMovement {
   0% {
-    transform: translateX(-400%);
+    transform: translateX(-300%);
   }
   100% {
-    transform: translateX(500%);
+    transform: translateX(300%);
   }
 }
 
