@@ -11,7 +11,7 @@ body {
 #sky-gradient {
   height: 100%;
   width: 100%;
-  background: linear-gradient(353deg, rgba(230,128,0,1) 25%, rgba(0,26,179,1) 100%);
+  background: linear-gradient(333deg, rgba(230,128,0,1) 25%, rgba(0,26,179,1) 80%);
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -19,31 +19,89 @@ body {
   position: absolute;
 }
 
-#waves {
-  background: #005F7E;
-  width: 100%;
-  height: 40%;
-  z-index: 2;
+.cloud {
   position: absolute;
-  bottom: 0;
-  animation-name: waves;
-  animation-duration: 7.6s;
+  z-index: 3;
+  width: 20%;
+  height: 20%;
+  animation-name: cloudMovement;
+  animation-duration: 20s;
   animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  top: 7.5%;
+}
+
+@keyframes cloudMovement {
+  0% {
+    transform: translateX(-400%);
+  }
+  100% {
+    transform: translateX(500%);
+  }
+}
+
+#waves-0 {
+  z-index: 1;
+  position: absolute;
+  animation-name: waves;
+  animation-duration: 5.6s;
+  animation-iteration-count: infinite;
+  width: 150%;
+  animation-timing-function: linear;
+  display: block;
+}
+
+#waves-1 {
+  z-index: 3;
+  position:absolute;
+  animation-name: waves;
+  animation-duration: 9.6s;
+  animation-iteration-count: infinite;
+  width: 150%;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+}
+
+#waves-2 {
+  z-index: 3;
+  position:absolute;
+  animation-name: waves;
+  animation-duration: 12.6s;
+  animation-iteration-count: infinite;
+  width: 150%;
+  animation-timing-function: linear;
+}
+
+.wave-stroke {
+  fill: #005F7E;
+  stroke: white;
+  stroke-width: 3px;
+  opacity: .8;
 }
 
 @keyframes waves {
-  0% {transform: translateY(0);}
-  50% {transform: translateY(10%);}
-  100% {transform: translateY(0);}
+  25% {
+    transform: translate(2.5%, 2.5%);
+  }
+  50% {
+    transform: translate(0%, 5%);
+  }
+  75% {
+    transform: translate(-2.5%, 2.5%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
 }
 
 #sand {
-  background: #e1bf92;
-  width: 100%;
-  height: 20%;
+  fill: #e1bf92;
+  width: 1800%;
+  height: 40%;
   position: absolute;
   z-index: 3;
   bottom: 0;
+
 }
 
 #toolbar-container {
@@ -66,7 +124,7 @@ body {
   height: 20%;
   text-align: center;
   animation-name: breathingArrow;
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
 }
 
@@ -91,7 +149,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 2em;
+  margin-top: 1.4em;
   color: black;
   font-size: 1.3em;
 }
