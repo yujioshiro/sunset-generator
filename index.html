@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="main.css">
-    <title></title>
-  </head>
-  <body>
-    <div id="sky-gradient"></div>
-    <div id="waves"></div>
-    <div id="sand"></div>
-    <div id="toolbar-container">
-      <div id="arrow">^</div>
-      <div id="toolbar">
-        <div class="tool" id="sky-tool">
-          <div class="object" id="sky-adjust">Sky</div>
-          <input type="range" min="0" max="100" value="100" class="slider" id="sky-slider">
-        </div>
-        <div class="tool" id="wave-tool">
-          <div class="object" id="wave-adjust">Waves</div>
-          <input type="range" min="0" max="100" value="100" class="slider" id="wave-slider">
-        </div>
-        <div class="tool" id="sand-tool">
-          <div class="object" id="sand-adjust">Sand</div>
-          <input type="range" min="0" max="100" value="100" class="slider" id="sand-slider">
-        </div>
-
-      </div>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="main.css">
+  <title>Location Based Sunset Generator</title>
+  <script src="env.js"></script>
+  <script src="api.js"></script>
+</head>
+<body>
+<div id="sky-gradient"></div>
+<div id="waves"></div>
+<div id="sand"></div>
+<div id="toolbar-container">
+  <div id="arrow">^</div>
+  <div id="toolbar">
+    <div class="tool" id="sky-tool">
+      <div class="object" id="sky-adjust">Sky</div>
+      <input type="range" min="0" max="100" value="100" class="slider" id="sky-slider">
     </div>
-    <script src="main.js" charset="utf-8"></script>
-  </body>
+    <div class="tool" id="wave-tool">
+      <div class="object" id="wave-adjust">Waves</div>
+      <input type="range" min="0" max="100" value="100" class="slider" id="wave-slider">
+    </div>
+    <div class="tool" id="sand-tool">
+      <div class="object" id="sand-adjust">Sand</div>
+      <input type="range" min="0" max="100" value="100" class="slider" id="sand-slider">
+    </div>
+  </div>
+</div>
+<script src="main.js" charset="utf-8"></script>
+</body>
 </html>
