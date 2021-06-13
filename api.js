@@ -56,6 +56,10 @@ function getStats(position) {
         Stats.time = 'night'
       }
 
+      setWeather();
+      setTime();
+      setWind();
+
       // Test the Stats
       console.log(Stats)
     })

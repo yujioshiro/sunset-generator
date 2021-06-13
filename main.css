@@ -28,7 +28,7 @@ body {
   animation-duration: 20s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  top: 7.5%;
+  top: 10%;
 }
 
 @keyframes cloudMovement {

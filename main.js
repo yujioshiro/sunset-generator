@@ -17,13 +17,24 @@ let cloudContainer = document.getElementById("clouds-container");
 let sandOutput = document.getElementById("sand");
 
 let setWeather = function() {
+  let randomNumber = Math.floor(Math.random() * 20);
   // If cloudy, show clouds
   if (Stats.weather === "cloudy") {
-    let singleCloud = document.createElement("IMG");
-    singleCloud.src = "cloud_jon_phillips_01.svg";
-    singleCloud.classList.add("cloud");
-    cloudContainer.appendChild(singleCloud);
-    console.log(Stats.weather);
+    for (let i = 0; i < 10; i++) {
+      let singleCloud = document.createElement("IMG");
+      singleCloud.src = "cloud_jon_phillips_01.svg";
+      singleCloud.classList.add("cloud");
+      singleCloud.style.animationDelay = `${i * 3}s`;
+      singleCloud.style.top = `${i}%`;
+      if (Stats.time === "night") {
+        singleCloud.style.filter = `brightness(.1)`;
+      } else if (Stats.time === "sunrise") {
+        singleCloud.style.filter = `brightness(.4)`;
+      } else if (Stats.time === "sunset") {
+        singleCloud.style.filter = `brightness(.4)`;
+      }
+      cloudContainer.appendChild(singleCloud);
+    }
   }
 }
 
@@ -48,14 +59,39 @@ let setWind = function() {
 let setTime = function() {
   // If night, set all brightness to 10
   if (Stats.time === "night") {
-    skyOutput.style.filter = `brightness(.1)`;
+    skyOutput.style.filter = `brightness(.05)`;
     waveOutput[0].style.filter = `brightness(.1)`;
     waveOutput[1].style.filter = `brightness(.1)`;
     waveOutput[2].style.filter = `brightness(.1)`;
     sandOutput.style.filter = `brightness(.2)`;
+    document.getElementById("sky-gradient").style.background = "#001173";
   }
   // If day, set all brightness to 105
-
+  else if (Stats.time === "day") {
+    skyOutput.style.filter = `brightness(1.05)`;
+    waveOutput[0].style.filter = `brightness(1.05)`;
+    waveOutput[1].style.filter = `brightness(1.05)`;
+    waveOutput[2].style.filter = `brightness(1.05)`;
+    sandOutput.style.filter = `brightness(1.5)`;
+    document.getElementById("sky-gradient").style.background = "#aeeef5";
+  }
+  // If sunrise, set all brightnesst to 40
+  else if (Stats.time === "sunrise") {
+    skyOutput.style.filter = `brightness(.4)`;
+    waveOutput[0].style.filter = `brightness(.4)`;
+    waveOutput[1].style.filter = `brightness(.4)`;
+    waveOutput[2].style.filter = `brightness(.4)`;
+    sandOutput.style.filter = `brightness(.7)`;
+    document.getElementById("sky-gradient").style.background = "linear-gradient(27deg, rgba(230,128,0,1) 25%, rgba(0,26,179,1) 80%)";
+  }
+  // If sunset, set all brightness to 40
+  else if (Stats.time === "sunset") {
+    skyOutput.style.filter = `brightness(.4)`;
+    waveOutput[0].style.filter = `brightness(.4)`;
+    waveOutput[1].style.filter = `brightness(.4)`;
+    waveOutput[2].style.filter = `brightness(.4)`;
+    sandOutput.style.filter = `brightness(.7)`;
+  }
 }
 
 // Get location
