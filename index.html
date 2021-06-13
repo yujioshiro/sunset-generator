@@ -3,15 +3,13 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="main.css">
-    <title></title>
+    <script src="env.js"></script>
+    <script src="api.js"></script>
+    <title>Location Based Sunset Generator</title>
   </head>
   <body>
     <div id="sky-gradient"></div>
-    <!-- <div id="waves-0"></div>
-    <div id="waves-1"></div>
-    <div id="waves-2"></div> -->
     <img src="cloud_jon_phillips_01.svg" alt="Clouds SVG" class="cloud"/>
-
     <svg id="waves-0" class="waves" height="100%" width="100%" id="svg" viewBox="0 -50 1440 600" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path class="wave-stroke" d="M 0,600 C 0,600 0,300 0,300 C 64.12420767048958,272.3774571463806 128.24841534097916,244.75491429276116 177,238 C 225.75158465902084,231.24508570723884 259.1305463065729,245.35779997533598 308,287 C 356.8694536934271,328.642200024664 421.2293994327291,397.81388580589476 480,382 C 538.7706005672709,366.18611419410524 591.9518559625108,265.3866568010852 644,238 C 696.0481440374892,210.61334319891478 746.9631767172278,256.6394869897645 792,272 C 837.0368232827722,287.3605130102355 876.195437168578,272.0553952398569 933,277 C 989.804562831422,281.9446047601431 1064.2550746084598,307.1389320508078 1121,321 C 1177.7449253915402,334.8610679491922 1216.784264397583,337.38887655691207 1267,332 C 1317.215735602417,326.61112344308793 1378.6078678012086,313.305561721544 1440,300 C 1440,300 1440,600 1440,600 Z" class="transition-all duration-300 ease-in-out delay-150"></path>
     <rect y="-800"/></svg>
     <svg id="waves-1" class="waves" height="100%" width="100%" id="svg" viewBox="0 -75 1440 500" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path class="wave-stroke" d="M 0,500 C 0,500 0,250 0,250 C 50.78792341678938,268.0257731958763 101.57584683357877,286.0515463917526 156,305 C 210.42415316642123,323.9484536082474 268.4845360824742,343.819587628866 336,321 C 403.5154639175258,298.180412371134 480.4860088365243,232.6701030927835 544,208 C 607.5139911634757,183.3298969072165 657.5714285714286,199.49999999999997 709,215 C 760.4285714285714,230.50000000000003 813.2282768777615,245.3298969072165 877,271 C 940.7717231222385,296.6701030927835 1015.5154639175257,333.180412371134 1075,314 C 1134.4845360824743,294.819587628866 1178.7098674521355,219.9484536082474 1237,200 C 1295.2901325478645,180.0515463917526 1367.6450662739321,215.0257731958763 1440,250 C 1440,250 1440,500 1440,500 Z" class="transition-all duration-300 ease-in-out delay-150"></path></svg>
@@ -38,6 +36,16 @@
         </div>
       </div>
     </div>
-    <script src="main.js" charset="utf-8"></script>
-  </body>
+    <div class="tool" id="wave-tool">
+      <div class="object" id="wave-adjust">Waves</div>
+      <input type="range" min="0" max="100" value="100" class="slider" id="wave-slider">
+    </div>
+    <div class="tool" id="sand-tool">
+      <div class="object" id="sand-adjust">Sand</div>
+      <input type="range" min="0" max="100" value="100" class="slider" id="sand-slider">
+    </div>
+  </div>
+</div>
+<script src="main.js" charset="utf-8"></script>
+</body>
 </html>
