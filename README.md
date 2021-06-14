@@ -5,6 +5,6 @@ A sunset generator created for the MLH Surf's Up Hackathon. This site will gener
 
 
 ## Authors
-[Connor Peace](https://github.com/Connorp123)
-[Dylan Sanders](https://github.com/Sandersd)
-[Yuji Oshiro](https://github.com/yujioshiro)
+[Connor Peace](https://github.com/Connorp123)  
+[Dylan Sanders](https://github.com/Sandersd)  
+[Yuji Oshiro](https://github.com/yujioshiro)  
